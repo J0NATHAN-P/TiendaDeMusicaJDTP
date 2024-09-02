@@ -24,10 +24,55 @@
         </header>
     </nav>
     <main>
-        <h1></h1>
+        <h1>Instrumentos Musicales</h1>
+        <section class="productos">
+            <div class="producto">
+                <img src="../images/GuitarraElectrica.jpg" alt="Guitarra Eléctrica" class="preview" onclick="openLightbox('../images/GuitarraElectrica.jpg')">
+                <div class="producto-info">
+                    <h2>Guitarra Eléctrica</h2>
+                    <p class="descripcion">Guitarra Electrica Color Cherry Sunburst Strinberg</p>
+                    <p class="precio">$489.99</p>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="producto">
+                <img src="../images/BateriaAcustica.jpg" alt="Batería Acústica" class="preview" onclick="openLightbox('../images/BateriaAcustica.jpg')">
+                <div class="producto-info">
+                    <h2>Batería Acústica</h2>
+                    <p class="descripcion">Set de batería acústica de 5 piezas color negro Rebel Mapex</p>
+                    <p class="precio">$849.95</p>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="producto">
+                <img src="../images/TecladoDigital.jpg" alt="Teclado Digital" class="preview" onclick="openLightbox('../images/TecladoDigital.jpg')">
+                <div class="producto-info">
+                    <h2>Teclado Digital</h2>
+                    <p class="descripcion">Teclado digital 61 teclas Yamaha PSR-SX900</p>
+                    <p class="precio">$3,187.50</p>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+            <span class="close">&times;</span>
+            <img id="lightbox-image" class="lightbox-content" src="" alt="Vista previa">
+        </div>
     </main>
     <footer>
         Derechos reservados &copy; 2024
     </footer>
+    <script>
+        function openLightbox(src) {
+            document.getElementById('lightbox-image').src = src;
+            document.getElementById('lightbox').style.display = 'flex';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').style.display = 'none';
+        }
+    </script>
 </body>
 </html>

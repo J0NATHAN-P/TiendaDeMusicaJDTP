@@ -24,10 +24,55 @@
         </header>
     </nav>
     <main>
-        <h1></h1>
+        <h1>Audio Profesional</h1>
+        <section class="productos">
+            <div class="producto">
+                <img src="../images/BaflePasivo.jpg" alt="Bafle Pasivo" class="preview" onclick="openLightbox('../images/BaflePasivo.jpg')">
+                <div class="producto-info">
+                    <h2>Bafle pasivo</h2>
+                    <p class="descripcion">12″ 180w XCalibur</p>
+                    <p class="precio">$119.95</p>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="producto">
+                <img src="../images/BafleAmplificado.jpg" alt="Bafle Amplificado" class="preview" onclick="openLightbox('../images/BafleAmplificado.jpg')">
+                <div class="producto-info">
+                    <h2>Bafle Amplificado</h2>
+                    <p class="descripcion">15″ 1500w USB/SD/BT C/MIC y pedestal Xcalibur</p>
+                    <p class="precio">$169.95</p>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="producto">
+                <img src="../images/ConsolaPasiva.jpg" alt="Consola Pasiva" class="preview" onclick="openLightbox('../images/ConsolaPasiva.jpg')">
+                <div class="producto-info">
+                    <h2>Consola Pasiva</h2>
+                    <p class="descripcion">Consola digital 32 canales TouchMix-30 QSC</p>
+                    <p class="precio">$3,199.95</p>
+                    <button>Añadir al carrito</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+            <span class="close">&times;</span>
+            <img id="lightbox-image" class="lightbox-content" src="" alt="Vista previa">
+        </div>
     </main>
     <footer>
         Derechos reservados &copy; 2024
     </footer>
+    <script>
+    function openLightbox(src) {
+        document.getElementById('lightbox-image').src = src;
+        document.getElementById('lightbox').style.display = 'flex';
+    }
+
+    function closeLightbox() {
+        document.getElementById('lightbox').style.display = 'none';
+    }
+    </script>
 </body>
 </html>
